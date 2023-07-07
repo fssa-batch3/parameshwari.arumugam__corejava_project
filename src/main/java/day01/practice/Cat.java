@@ -7,7 +7,7 @@ public class Cat {
     private String color;
     private String Speaks;
 	
-	    public String getAge() {
+    public String getAge() {
 		return age;
 	}
 	public void setAge(String age) {
