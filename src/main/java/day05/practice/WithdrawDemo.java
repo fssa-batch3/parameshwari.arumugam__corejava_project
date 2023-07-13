@@ -1,7 +1,5 @@
 package day05.practice;
 
-
-
 public class WithdrawDemo {
   public static void main(String[] args) {
 	  Account1 axisaccount = new Account1("123456789", 5000);

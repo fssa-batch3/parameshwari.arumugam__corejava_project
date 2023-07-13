@@ -10,7 +10,7 @@ class AxisATM implements ATM {
 	@Override
 	public boolean withdraw(Account1 account, double amount) throws Exception {
 		// TODO Auto-generated method stub
-		if (account.balance < 4000) {
+		if (account.balance < 5000) {
 			throw new Exception("Your account balance is less than 5000 you should have mininmum balance to withdraw");
 		}
 		double amountwithdraw = amount + 5;
