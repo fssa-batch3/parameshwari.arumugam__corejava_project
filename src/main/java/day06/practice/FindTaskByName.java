@@ -15,8 +15,6 @@ class Task1 {
 	    }
 }
 
-
-
 public class FindTaskByName {
    public static void main(String[] args) {
 	   ArrayList<Task1> tasks = new ArrayList<>();

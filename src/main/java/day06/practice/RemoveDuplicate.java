@@ -22,9 +22,8 @@ public class RemoveDuplicate {
 			}
 		}
 		
-		System.out.println(newCity);
-    	
-    	
+	System.out.println(newCity);
+		
 //   
 //		for(int i=0; i<cityList.size(); i++) {
 //			for(int j=i+1; j<cityList.size(); j++) {
@@ -36,8 +35,6 @@ public class RemoveDuplicate {
 //			
 //		}
 //		System.out.println(cityList);
-    	
-    	
-
+ 
 	}
 }

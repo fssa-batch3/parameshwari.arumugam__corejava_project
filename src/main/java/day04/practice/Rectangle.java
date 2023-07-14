@@ -1,6 +1,7 @@
 package day04.practice;
 
 public class Rectangle extends Polygon {
+	
 	protected double length;
 	protected double breadth;
 	

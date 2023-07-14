@@ -1,6 +1,7 @@
 package day04.practice;
 
 abstract class Polygon {
+	
 	protected int numberOfSides;
 	
 	public Polygon (int numberOfSides) throws Exception {

@@ -12,15 +12,11 @@ class Task {
         this.taskName = taskName;
         this.priority = priority;
     }
-     
-     
 }
-
-
 
 public class TaskArray {
    public static void main(String[] args) {
-	// Store the Task names in the List
+	   
 	   ArrayList<Task> TaskList = new ArrayList<>();
 	   TaskList.add(new Task("Wake Up", 6));
 	   TaskList.add(new Task("Exercise", 3));
@@ -29,7 +25,6 @@ public class TaskArray {
        for (Task task : TaskList) {
            System.out.println("Task Name: " + task.taskName);
            System.out.println("Priority: " + task.priority);
-           System.out.println();
-       }
-}
+        }
+     }
 }
