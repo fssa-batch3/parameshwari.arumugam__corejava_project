@@ -4,11 +4,6 @@ package day07.solved;
 import java.util.ArrayList;
 import java.util.HashSet;
 
-/**
- * @author BharathwajSoundarara
- *
- */
-
 class Employee {
 
 	int id;
