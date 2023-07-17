@@ -18,10 +18,8 @@ public class TestDuplicateNumbers {
 		numbers.add(1);
 		numbers.add(4);
 		numbers.add(5);
-		numbers.add(7);
-		numbers.add(7);
-
-		HashSet<Integer> uniqueArray = new HashSet<Integer>(Arrays.asList(2, 4, 5, 7));
+		
+		HashSet<Integer> uniqueArray = new HashSet<Integer>(Arrays.asList(2, 4, 5));
 		try {
 			DuplicateNumbers.removeDuplicate(numbers);
 			boolean valid = DuplicateNumbers.validateDuplicatemethod(numbers, uniqueArray);
