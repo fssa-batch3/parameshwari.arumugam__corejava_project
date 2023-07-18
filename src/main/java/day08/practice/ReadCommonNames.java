@@ -4,35 +4,39 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Scanner;
 
 public class ReadCommonNames {
    public static void main(String[] args) {
-	   HashMap<String, List<String>> departmentEmployeeMap = new HashMap<>();
-       String input = "HR,Ram\n" + "HR,Suresh\n" + "IT,Basker\n" +"IT,Joseph\n" + "Admin,Sundar";
+		
+	   Scanner sc=new Scanner(System.in);
+	   Map<String, List<String>> employees = new HashMap<>();
 
-       String[] lines = input.split("\n"); 
-       for (String line : lines) {
-           String[] parts = line.split(",");
-           String deptName = parts[0].trim();
-           String EmployeeName  = parts[1].trim();
 
-           if (departmentEmployeeMap.containsKey(deptName)) {
-             
-               departmentEmployeeMap.get(deptName).add(EmployeeName );
-           } else {
-              
-               List<String> employees = new ArrayList<>();
-               employees.add(EmployeeName );
-               departmentEmployeeMap.put(deptName, employees);
-           }
-       }
-
-   
-       for (Map.Entry<String, List<String>> entry : departmentEmployeeMap.entrySet()) {
-           String deptName = entry.getKey();
-           List<String> employees = entry.getValue();
-           System.out.println(deptName + ", " + employees);
-       }
+	   for(int i=0;i<5;i++) {
+	   	System.out.println("Enter Employee Name and Department Name");
+	   	String str=sc.nextLine();
+	   	if(str==null || "".equals(str)) {
+	   		
+	   		throw new IllegalArgumentException("Input cant't be Empty or Null");
+	   	}
+	   	
+	   	String [] arrstr=str.split(",");
+	   	
+	   	if(arrstr.length<2 || arrstr.length>2 ) {
+	   		throw new IllegalArgumentException("Input Must have department name and employee name");
+	   	}
+	   	
+	   	if(employees.get(arrstr[0])==null) {
+	   		employees.put(arrstr[0], new ArrayList<>());
+	   		employees.get(arrstr[0]).add(arrstr[1]);
+	   	}
+	   	else {
+	   		employees.get(arrstr[0]).add(arrstr[1]);
+	   	}
+	   	
+	   }
+	   System.out.println(employees);
 
 }
 }

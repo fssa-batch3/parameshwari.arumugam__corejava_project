@@ -5,7 +5,9 @@ import java.util.Map;
 
 public class CountCommonNames {
   public static void main(String[] args) {
-	  String [] names = {"ram","ram","Superman", "Spider", "hey", "hello","hey", "Spider"};
+	  String [] names = {"Ram","Ram","Superman", "Spider", "Hey", "Hello","Hey", "Spider"};
+	  
+	  
 	  
 	  Map<String, Integer> countMap = new HashMap<String, Integer>();
 	   
