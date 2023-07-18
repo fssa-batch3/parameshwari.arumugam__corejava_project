@@ -9,14 +9,15 @@ import java.util.Scanner;
 public class ReadCommonNames {
    public static void main(String[] args) {
 		
-	   Scanner sc=new Scanner(System.in);
+	   Scanner sc = new Scanner(System.in);
+	   
 	   Map<String, List<String>> employees = new HashMap<>();
 
 
-	   for(int i=0;i<5;i++) {
+	   for(int i=0;i<3;i++) {
 	   	System.out.println("Enter Employee Name and Department Name");
 	   	String str=sc.nextLine();
-	   	if(str==null || "".equals(str)) {
+	   	if(str == null || "".equals(str)) {
 	   		
 	   		throw new IllegalArgumentException("Input cant't be Empty or Null");
 	   	}
@@ -27,7 +28,7 @@ public class ReadCommonNames {
 	   		throw new IllegalArgumentException("Input Must have department name and employee name");
 	   	}
 	   	
-	   	if(employees.get(arrstr[0])==null) {
+	   	if(employees.get(arrstr[0]) == null) {
 	   		employees.put(arrstr[0], new ArrayList<>());
 	   		employees.get(arrstr[0]).add(arrstr[1]);
 	   	}
@@ -35,8 +36,8 @@ public class ReadCommonNames {
 	   		employees.get(arrstr[0]).add(arrstr[1]);
 	   	}
 	   	
-	   }
+	       }
 	   System.out.println(employees);
 
-}
+     }
 }
