@@ -8,10 +8,12 @@ import java.util.List;
 import java.util.Scanner;
 
 class CustomTask {
+	
     private int id;
     private String name;
     private LocalDate deadline;
     private int priority;
+    
     public CustomTask(int id, String name, LocalDate deadline, int priority) {
         this.id = id;
         this.name = name;
@@ -44,6 +46,7 @@ class TaskComparator implements Comparator<CustomTask> {
 
 public class PrioritySortingDemo {
   public static void main(String[] args) {
+	  
 	  List<CustomTask> tasks = new ArrayList<>();
       Scanner scanner = new Scanner(System.in);
       System.out.println("Enter the number of tasks:");

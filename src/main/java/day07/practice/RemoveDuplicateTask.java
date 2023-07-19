@@ -7,6 +7,7 @@ import java.util.List;
 
 
 class Task {
+	
 	 int id;
 	 String name;
 	 LocalDate deadline;
@@ -31,21 +32,21 @@ class Task {
 	    }
 	    
 	    
-	    public boolean equals(Object obj) {
-	        if (this == obj) {
-	            return true;
-	        }
-	        if (obj == null || getClass() != obj.getClass()) {
-	            return false;
-	        }
-	        Task task2 = (Task) obj;
-	        return id == task2.id && name.equals(task2.name) && deadline.equals(task2.deadline);
-	    }
-	    
-	    
-	    public int hashCode() {
-	        return id;
-	    }
+//	    public boolean equals(Object obj) {
+//	        if (this == obj) {
+//	            return true;
+//	        }
+//	        if (obj == null || getClass() != obj.getClass()) {
+//	            return false;
+//	        }
+//	        Task task2 = (Task) obj;
+//	        return id == task2.id && name.equals(task2.name) && deadline.equals(task2.deadline);
+//	    }
+//	    
+//	    
+//	    public int hashCode() {
+//	        return id;
+//	    }
 }
 
 public class RemoveDuplicateTask {
@@ -59,12 +60,12 @@ public class RemoveDuplicateTask {
 	   newTask.add(new Task(4, "Task 4", LocalDate.of(2023, 7, 15))); 
        newTask.add(new Task(5, "Task 2", LocalDate.of(2023, 7, 16))); 
        
-       System.out.println("Tasks with duplication:");
-       
-       for (Task task : newTask) {
-           System.out.println(task.getId() + " - " + task.getName() + " - " + task.getDeadline());
-       }
-       
+//       System.out.println("Tasks with duplication:");
+//       
+//       for (Task task : newTask) {
+//           System.out.println(task.getId() + " - " + task.getName() + " - " + task.getDeadline());
+//       }
+////       
        HashSet<Task> uniqueTasks = new HashSet<>(newTask);
        
        System.out.println("\nTasks without duplication:");
