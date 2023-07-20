@@ -2,11 +2,11 @@ package day10.practice;
 
 import java.util.ArrayList;
 
+
 class UserAlreadyExistsException extends RuntimeException {
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = -8105491977357554060L;
 
 	// Calling each super constructors for each of the types
 	public UserAlreadyExistsException(String msg) {
@@ -79,8 +79,10 @@ public class UserAlreadyExists {
 		User user2=new User(1, "paramu", "paramuap@gmail.com");
 	String data1=UserValidator.userAlreadyvalidate(user1);
 	String data2=UserValidator.userAlreadyvalidate(user2);
+
 	System.out.println(data1);
 	System.out.println(data2);
+	
 		
 		
 	}

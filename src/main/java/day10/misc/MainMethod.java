@@ -17,6 +17,11 @@ class Divider{
 
 public class MainMethod {
    public static void main(String[] args) {
-	Divider.divisor(5,0);
+	try {
+		Divider.divisor(5,0);
+	} catch (Exception e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
 }
 }

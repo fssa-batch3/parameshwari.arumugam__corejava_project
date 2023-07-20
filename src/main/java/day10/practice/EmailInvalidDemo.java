@@ -8,7 +8,7 @@ class InvalidEmailException extends Exception {
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = -8105491977357554060L;
+//	private static final long serialVersionUID = -8105491977357554060L;
 
 	public InvalidEmailException(String msg) {
 		super(msg);
@@ -52,6 +52,7 @@ public class EmailInvalidDemo {
 	    String email=scan.nextLine();
 	try {
 		EmailValidator.isValidEmail(email);
+		
 	} catch (InvalidEmailException ex) {
 
 		ex.printStackTrace();
