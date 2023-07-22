@@ -41,7 +41,7 @@ class User {
 	}
 	public String getName() {
 		return name;
-	}
+	} 
 	public void setName(String name) {
 		this.name = name;
 	}
@@ -53,13 +53,12 @@ class User {
 	}
 	
 }
-
+ 
 class UserValidator {
 	static ArrayList<User> arr = new ArrayList<User>();
-	public static String userAlreadyvalidate(User user) throws UserAlreadyExistsException {
-		if (arr.size() == 0) {
-			arr.add(user);
-			return "User added";
+	public static boolean register(User user) throws UserAlreadyExistsException {
+		if (user == null) {
+			throw new UserAlreadyExistsException("User Object Cannot be Null");
 		}
 		
 		for(User element:arr) {
@@ -69,7 +68,9 @@ class UserValidator {
 			
 		}
 		arr.add(user);
-		return "User added";
+		System.out.println(arr);
+		System.out.println("User added");
+		return true;
 	}
 }
 
@@ -77,11 +78,11 @@ public class UserAlreadyExists {
 	public static void main(String[] args) {
 		User user1=new User(1, "paramu", "paramu@gmail.com");
 		User user2=new User(1, "paramu", "paramuap@gmail.com");
-	String data1=UserValidator.userAlreadyvalidate(user1);
-	String data2=UserValidator.userAlreadyvalidate(user2);
-
-	System.out.println(data1);
-	System.out.println(data2);
+		
+		
+		UserValidator.register(user1);
+		UserValidator.register(user2);
+	
 	
 		
 		

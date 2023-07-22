@@ -8,7 +8,7 @@ class InvalidEmailException extends Exception {
 	/**
 	 * 
 	 */
-//	private static final long serialVersionUID = -8105491977357554060L;
+	private static final long serialVersionUID = -8105491977357554060L;
 
 	public InvalidEmailException(String msg) {
 		super(msg);
@@ -24,31 +24,32 @@ class InvalidEmailException extends Exception {
 }
 
 class EmailValidator {
+	
 	public static boolean isValidEmail(String emailId) throws InvalidEmailException {
 
-		if(emailId==null) {
-			throw new InvalidEmailException("The email cannot be null");
+		if (emailId == null) {
+			throw new InvalidEmailException("Email cannot be null");
 		}
-		
-		String regex = "^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$";
-		
-	Pattern pattern = Pattern.compile(regex);
-	Matcher matcher = pattern.matcher(emailId);
 
-	Boolean isMatch = Pattern.matches(regex, emailId);
+		String regex = "^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$";
+
+		Boolean isMatch = Pattern.matches(regex, emailId);
 
 		if (!isMatch) {
-		throw new InvalidEmailException("The email is invalid");
-		} 
-		
+			throw new InvalidEmailException("Invalid Email Id");
+		}
+
+		System.out.println("Valid Email Id");
+
 		return true;
+
 		
 	}
 }
 public class EmailInvalidDemo {
 	public static void main(String[] args) {
 		Scanner scan=new Scanner(System.in);
-		System.out.println("Enter your email");
+		System.out.println("Enter your email"); 
 	    String email=scan.nextLine();
 	try {
 		EmailValidator.isValidEmail(email);
