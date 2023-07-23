@@ -86,10 +86,6 @@ public class TestTaskDAO1 {
 	}
 
 	public static boolean createTask(Task task) throws DAOException, IllegalArgumentException {
-		// Write code here to get connection
-		// Create insert statement
-		// Execute insert statement
-		// close connection
 		
 		try {
 			TaskValidator.validate(task);
@@ -120,10 +116,6 @@ public class TestTaskDAO1 {
 	}
 
 	public static boolean updateTask(Task task) throws DAOException {
-		// Write code here to get connection
-		// Create update statement using task id
-		// Execute update statement using task id
-		// close connection
 		
 		try {
 			TaskValidator.validate(task);
@@ -159,10 +151,6 @@ public class TestTaskDAO1 {
 	}
 
 	public static boolean deleteTask(int taskId) throws DAOException {
-		// Write code here to get connection
-		// Create delete statement using task id
-		// Execute delete statement using task id
-		// close connection
 		
 		if(taskId <= 0) {
 			throw new IllegalArgumentException("Task Id conn't be 0 or less then 0");
@@ -189,15 +177,7 @@ public class TestTaskDAO1 {
 	}
 
 	public static List<Task> getAllTasks() throws DAOException {
-		
-		// Write code here to get connection
-		// Create a Select all query with each attribute listed as columns
-		// Execute query
-		// Iterate over the resultset and convert it to an ArrayList
-		// close connection
-		// Return the ArrayList of Tasks
-		
-		
+
 		Connection con = null;
 		
 		try {

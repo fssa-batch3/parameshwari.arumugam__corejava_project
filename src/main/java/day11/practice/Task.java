@@ -15,7 +15,7 @@ class Task {
 	Task(String name, String status){
 
 		this.name = name;
-		this.status = status;
+		this.status = status; 
 	}
 	
 }
